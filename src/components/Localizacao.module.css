@@ -1,0 +1,112 @@
+.section {
+  padding: 120px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.mapContainer {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.mapPlaceholder {
+  aspect-ratio: 16/10;
+  background: linear-gradient(145deg, #141414, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #333333;
+}
+
+.mapPlaceholder svg {
+  color: #00d4ff;
+  opacity: 0.3;
+}
+
+.mapPlaceholder span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444444;
+}
+
+.mapSubtext {
+  font-size: 0.8rem !important;
+  color: #333333 !important;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: linear-gradient(145deg, #141414, #1a1a1a);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  border-color: rgba(0, 212, 255, 0.2);
+  transform: translateX(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.infoIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoIcon svg {
+  width: 22px;
+  height: 22px;
+  color: #00d4ff;
+}
+
+.infoTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.infoText {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 16px;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

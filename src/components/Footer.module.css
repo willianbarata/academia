@@ -1,0 +1,28 @@
+.footer {
+  background: #0d0d0d;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 60px 20px 30px;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.05em; margin-bottom: 12px; }
+.logoAccent { background: linear-gradient(135deg, #00d4ff, #39ff14); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.tagline { font-size: 0.9rem; color: #666; font-weight: 300; font-style: italic; margin-bottom: 16px; }
+.address { font-size: 0.85rem; color: #888; line-height: 1.7; font-weight: 300; }
+.linksTitle { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #fff; margin-bottom: 20px; }
+.links { list-style: none; padding: 0; margin: 0; }
+.links li { margin-bottom: 10px; }
+.links a { font-size: 0.9rem; color: #888; font-weight: 300; transition: color 0.3s; }
+.links a:hover { color: #00d4ff; }
+.socials { display: flex; gap: 12px; }
+.socialIcon { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+.socialIcon:hover { background: rgba(0,212,255,0.1); border-color: rgba(0,212,255,0.3); transform: translateY(-4px); }
+.socialIcon svg { width: 20px; height: 20px; color: #888; transition: color 0.3s; }
+.socialIcon:hover svg { color: #00d4ff; }
+.bottom { border-top: 1px solid rgba(255,255,255,0.04); padding-top: 24px; text-align: center; }
+.bottom p { font-size: 0.8rem; color: #444; font-weight: 300; }
+@media (max-width: 768px) {
+  .footer { padding: 40px 16px 20px; }
+  .grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .socials { justify-content: center; }
+}

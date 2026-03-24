@@ -1,0 +1,213 @@
+.section {
+  padding: 120px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+  align-items: center;
+}
+
+.card {
+  background: linear-gradient(145deg, #141414, #1a1a1a);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.featured {
+  border-color: rgba(0, 212, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.featured::before {
+  background: linear-gradient(90deg, #00d4ff, #39ff14);
+}
+
+.featured:hover {
+  transform: scale(1.05) translateY(-6px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), 0 0 50px rgba(0, 212, 255, 0.15);
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: -32px;
+  background: linear-gradient(135deg, #00d4ff, #39ff14);
+  color: #0a0a0a;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 40px;
+  transform: rotate(45deg);
+}
+
+.planName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #b0b0b0;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.featured .planName {
+  color: #00d4ff;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+
+.currency {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #666666;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.featured .price {
+  background: linear-gradient(135deg, #00d4ff, #39ff14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.period {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  text-align: left;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 0.92rem;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.feature:last-child {
+  border-bottom: none;
+}
+
+.featureDisabled {
+  color: #444444;
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  color: #39ff14;
+  flex-shrink: 0;
+}
+
+.xIcon {
+  width: 18px;
+  height: 18px;
+  color: #444444;
+  flex-shrink: 0;
+}
+
+.ctaButton {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ctaButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.ctaFeatured {
+  background: linear-gradient(135deg, #00d4ff, #39ff14);
+  color: #0a0a0a;
+  border: none;
+}
+
+.ctaFeatured:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featured {
+    transform: scale(1);
+  }
+
+  .featured:hover {
+    transform: translateY(-6px);
+  }
+
+  .card {
+    padding: 32px 24px;
+  }
+}

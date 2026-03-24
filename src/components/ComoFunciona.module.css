@@ -1,0 +1,165 @@
+.section {
+  padding: 120px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 60px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #00d4ff, rgba(57, 255, 20, 0.3), transparent);
+  transform: translateX(-50%);
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.stepRight {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.stepNumber {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #141414;
+  border: 2px solid #00d4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step:hover .stepNumber {
+  background: rgba(0, 212, 255, 0.15);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  transform: translateX(-50%) scale(1.1);
+}
+
+.stepNumber span {
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00d4ff, #39ff14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stepCard {
+  width: calc(50% - 60px);
+  background: linear-gradient(145deg, #141414, #1a1a1a);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.step:not(.stepRight) .stepCard {
+  margin-right: auto;
+}
+
+.stepRight .stepCard {
+  margin-left: auto;
+}
+
+.stepCard:hover {
+  border-color: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 212, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+.stepIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 212, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.stepRight .stepIcon {
+  margin-left: auto;
+}
+
+.stepIcon svg {
+  width: 24px;
+  height: 24px;
+  color: #00d4ff;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.stepDescription {
+  font-size: 0.92rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 16px;
+  }
+
+  .timelineLine {
+    left: 28px;
+  }
+
+  .step,
+  .stepRight {
+    flex-direction: column;
+    text-align: left;
+    padding-left: 70px;
+    gap: 16px;
+  }
+
+  .stepNumber {
+    left: 28px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .stepCard {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .stepRight .stepCard {
+    margin-left: 0;
+  }
+
+  .stepRight .stepIcon {
+    margin-left: 0;
+  }
+}
